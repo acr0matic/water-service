@@ -2,7 +2,33 @@
 // В этом файле подключаются все шрифты через font-face, если таковые есть
 // -----------------------------------------------------------------------------
 
-@include font-face("Roboto", "../fonts/Roboto/Roboto-Light", 300);
-@include font-face("Roboto", "../fonts/Roboto/Roboto-Regular", 400);
-@include font-face("Roboto", "../fonts/Roboto/Roboto-Medium", 500);
-@include font-face("Roboto", "../fonts/Roboto/Roboto-Bold", 700);
+@include font-face(
+  "SFProDisplay",
+  "../fonts/SFProDisplay/SFProDisplay-Light",
+  300
+);
+@include font-face(
+  "SFProDisplay",
+  "../fonts/SFProDisplay/SFProDisplay-Regular",
+  400
+);
+@include font-face(
+  "SFProDisplay",
+  "../fonts/SFProDisplay/SFProDisplay-Medium",
+  500
+);
+@include font-face(
+  "SFProDisplay",
+  "../fonts/SFProDisplay/SFProDisplay-SemiBold",
+  600
+);
+@include font-face(
+  "SFProDisplay",
+  "../fonts/SFProDisplay/SFProDisplay-Bold",
+  700
+);
+@include font-face(
+  "SFProDisplay",
+  "../fonts/SFProDisplay/SFProDisplay-Black",
+  900
+);
