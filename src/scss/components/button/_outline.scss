@@ -1,0 +1,10 @@
+.button-outline {
+  border-color: $palette-white;
+  color: $color-text__white;
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 3px 4px 14px rgba(#000000, 0.25);
+    }
+  }
+}

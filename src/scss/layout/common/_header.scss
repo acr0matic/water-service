@@ -3,9 +3,52 @@
 // -----------------------------------------------------------------------------
 
 #header {
-
 }
 
 .header {
+  position: sticky;
+  z-index: $z-index-header;
+  top: 0;
+  padding: 30px 0;
+  background-color: $palette-darkblue;
 
+  box-shadow: 0 5px 33px rgba($palette-darkblue, 0.41);
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-right: 45px;
+    }
+
+    margin-right: 60px;
+  }
+
+  &__nav {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-right: 30px;
+    }
+
+    margin-right: 60px;
+  }
+
+  &__callback {
+    margin-right: auto;
+
+    a {
+      @include breakpoint($breakpoint-laptop--medium) {
+        font-weight: $weight-Medium;
+        font-size: $font-size__text--small;
+      }
+
+      color: $palette-white;
+    }
+  }
+
+  &__menu {
+    margin-left: auto;
+  }
 }

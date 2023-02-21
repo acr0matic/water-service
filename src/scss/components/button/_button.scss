@@ -1,5 +1,12 @@
 .button {
-  border: none;
+  @include breakpoint($breakpoint-laptop--medium) {
+    font-size: $font-size__text--regular;
+    padding: 12px 24px;
+  }
+
+  padding: 14px 30px;
+
+  border: 2px solid transparent;
   border-radius: $border-radius--button;
   outline: none;
 
