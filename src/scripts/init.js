@@ -8,3 +8,6 @@ const lazyLoadInstance = new LazyLoad({
     if (loader) loader.classList.add('preloader--hide');
   },
 });
+
+const accordion = document.querySelectorAll('.handorgel')
+accordion.forEach(item => new handorgel(item));

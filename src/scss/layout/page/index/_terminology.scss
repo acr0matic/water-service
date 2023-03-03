@@ -1,0 +1,10 @@
+#terminology {
+}
+
+.terminology {
+  .handorgel {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

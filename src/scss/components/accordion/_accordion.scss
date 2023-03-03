@@ -1,0 +1,68 @@
+.handorgel {
+  border: none;
+
+  &__header {
+    position: relative;
+    z-index: 2;
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 20px 40px;
+      border: 2px solid rgba($color: #000000, $alpha: 0.3);
+      border-radius: $border-radius;
+
+      background-color: $palette-white !important;
+
+      transition: $transition ease;
+
+      @media (hover: hover) {
+        &:hover {
+          border-color: #000000;
+        }
+      }
+    }
+
+    &__text {
+      font-weight: $weight-Regular;
+      font-size: $font-size__text--large;
+    }
+
+    &--open {
+      .handorgel__indicator {
+        transform: rotate(135deg);
+      }
+
+      .handorgel__header__button {
+        border-color: #000000;
+
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+  }
+
+  &__indicator {
+    transition: $transition ease;
+  }
+
+  &__content {
+    margin-top: -4px;
+
+    border: 2px solid rgba($color: #000000, $alpha: 0.3);
+    border-radius: 0 0 $border-radius $border-radius;
+
+    background-color: transparent;
+    transition: $transition ease;
+
+    &--open {
+      border-color: #000000;
+    }
+
+    &__inner {
+      padding: 20px 40px;
+    }
+  }
+}
