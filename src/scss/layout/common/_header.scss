@@ -48,6 +48,17 @@
     }
   }
 
+  &__action {
+    .button {
+      @include breakpoint($breakpoint-laptop--medium) {
+        padding: 12px 24px;
+      }
+
+      padding: 12px 30px;
+      font-weight: $weight-Regular;
+    }
+  }
+
   &__menu {
     margin-left: auto;
   }

@@ -1,10 +1,15 @@
 .button-outline {
-  border-color: $palette-white;
-  color: $color-text__white;
+  border-color: $palette-darkblue;
 
   @media (hover: hover) {
     &:hover {
+      border-color: $palette-blue;
       box-shadow: 3px 4px 14px rgba(#000000, 0.25);
     }
+  }
+
+  &--white {
+    border-color: $palette-white;
+    color: $color-text__white;
   }
 }

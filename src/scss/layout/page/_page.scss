@@ -3,5 +3,19 @@
 // -----------------------------------------------------------------------------
 
 .page {
+  &__title {
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__title--large - 5px;
+    }
 
+    font-size: $font-size__title--large;
+  }
+
+  &__text {
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--regular;
+    }
+
+    font-size: $font-size__text--big;
+  }
 }
