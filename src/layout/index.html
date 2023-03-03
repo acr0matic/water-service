@@ -46,6 +46,66 @@
     </div>
     <!-- /.container -->
   </section>
+
+  <section id="service" class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title text-center">
+          Какие услуги мы предоставляем
+        </h2>
+      </div>
+      <!-- /.section__header -->
+
+      <div class="service">
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <div class="service__grid">
+              @@include('layout/template/card/service.html', {
+              "title": "Бурение скважин для индивидуального водоснабжения",
+              "price": "от 50 000 р.",
+              "image": "img/layout/template/card/service/1.svg"
+              })
+
+              @@include('layout/template/card/service.html', {
+              "title": "Обустройство скважины",
+              "price": "от 50 000 р.",
+              "image": "img/layout/template/card/service/2.svg"
+              })
+
+              @@include('layout/template/card/service.html', {
+              "title": "Промышленное бурение",
+              "price": "от 50 000 р.",
+              "image": "img/layout/template/card/service/3.svg"
+              })
+
+              @@include('layout/template/card/service.html', {
+              "title": "Фильтрация воды",
+              "price": "от 50 000 р.",
+              "image": "img/layout/template/card/service/4.png"
+              })
+
+              @@include('layout/template/card/service.html', {
+              "title": "Бурение разведочно-поисковых скважин",
+              "price": "от 50 000 р.",
+              "image": "img/layout/template/card/service/5.svg"
+              })
+
+              @@include('layout/template/card/service.html', {
+              "title": "Сервис и регламентное <br> обслуживание",
+              "price": "от 50 000 р.",
+              "image": "img/layout/template/card/service/6.svg"
+              })
+            </div>
+            <!-- /.service__grid -->
+          </div>
+          <!-- /.col-10 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.service -->
+    </div>
+    <!-- /.container -->
+  </section>
 </main>
 
 @@include('layout/partials/footer.html')

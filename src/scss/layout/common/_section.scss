@@ -1,9 +1,14 @@
 .section {
-  &__header {
+  &:not(:last-child) {
+    margin-bottom: 130px;
+  }
 
+  &__header {
+    margin-bottom: 40px;
   }
 
   &__title {
-
+    color: $color-text__darkblue;
+    font-size: $font-size__title--medium;
   }
 }
