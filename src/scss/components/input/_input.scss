@@ -15,42 +15,47 @@
       border-color: #e64747;
     }
 
-    .input__warning {
+    .input__error {
+      top: 100%;
       opacity: 1;
       visibility: visible;
     }
   }
 
   &__field {
+    position: relative;
+    z-index: 2;
+
     width: 100%;
     padding: 20px 25px;
 
-    border: 1px solid $palette-darkblue;
+    border: 2px solid $palette-darkblue;
+    border-radius: $border-radius--small;
     outline: none;
 
-    background-color: transparent;
+    background-color: $palette-white;
     color: $color-text__primary;
 
-    font-size: $font-size__text--regular;
+    font-size: $font-size__text--large;
 
     &::placeholder {
-      color: #353535;
+      color: $color-text__lightgray;
     }
   }
 
-  &__warning {
+  &__error {
     position: absolute;
-    top: 50%;
-    right: 15px;
+    z-index: 1;
+    top: 0;
+    left: 0;
 
-    width: 24px;
-    height: 24px;
+    color: $color-text__red;
+
+    font-weight: $weight-Light;
+    font-size: $font-size__text--regular;
 
     opacity: 0;
     visibility: hidden;
-
-    cursor: help;
-    transform: translateY(-50%);
 
     transition: 0.2s ease;
   }

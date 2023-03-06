@@ -10,4 +10,11 @@ const lazyLoadInstance = new LazyLoad({
 });
 
 const accordion = document.querySelectorAll('.handorgel')
-accordion.forEach(item => new handorgel(item));
+accordion.forEach(item => new handorgel(item, {
+  initialOpenTransition: false,
+}));
+
+
+const forms = document.querySelectorAll('form');
+forms.forEach(form => new Form(form));
+

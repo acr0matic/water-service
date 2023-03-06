@@ -1,0 +1,18 @@
+#callback {
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+
+.callback {
+  .section__text {
+    color: $color-text__gray;
+
+    a {
+      font-size: $font-size__text--large;
+    }
+  }
+
+  .form {
+    margin-top: 75px;
+  }
+}
