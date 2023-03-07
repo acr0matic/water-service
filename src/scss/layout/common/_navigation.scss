@@ -61,4 +61,51 @@
       }
     }
   }
+
+  &--footer {
+    .nav__list {
+      display: inline-flex;
+      flex-direction: column;
+    }
+
+    .nav__item {
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+
+    .nav__link {
+      color: #cbcbcb;
+      transition: $transition ease;
+
+      @media (hover: hover) {
+        &:hover {
+          color: $palette-white;
+
+          &::after {
+            right: -45px;
+
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+
+      &::after {
+        content: url("../img/icons/component/nav/arrow__right.svg");
+        position: absolute;
+        top: 43%;
+        right: -15px;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-50%);
+        transition: $transition ease;
+      }
+    }
+  }
 }

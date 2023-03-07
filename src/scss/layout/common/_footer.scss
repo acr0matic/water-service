@@ -3,9 +3,40 @@
 // -----------------------------------------------------------------------------
 
 #footer {
+  padding-top: 64px;
+  padding-bottom: 100px;
 
+  background-color: $palette-darkblue;
 }
 
 .footer {
+  color: $color-text__white;
 
+  a {
+    color: $color-text__white;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__nav {
+    margin-left: 64px;
+  }
+
+  &__category {
+    display: inline-flex;
+    margin-bottom: 40px;
+
+    font-weight: $weight-Bold;
+    font-size: $font-size__text--large;
+  }
+
+  &__office {
+    span {
+      display: block;
+      margin-top: 24px;
+    }
+  }
 }
