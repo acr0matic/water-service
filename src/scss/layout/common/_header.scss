@@ -13,6 +13,11 @@
   background-color: $palette-darkblue;
 
   box-shadow: 0 5px 33px rgba($palette-darkblue, 0.41);
+  transition: $transition ease;
+
+  &-hide {
+    transform: translateY(-100%);
+  }
 
   &__wrapper {
     display: flex;
