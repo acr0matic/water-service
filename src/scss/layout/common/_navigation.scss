@@ -62,6 +62,22 @@
     }
   }
 
+  &--side {
+    .nav__item {
+      text-align: right;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .nav__link {
+      color: $color-text__white;
+      font-size: $font-size__text--large;
+      text-transform: uppercase;
+    }
+  }
+
   &--footer {
     .nav__list {
       display: inline-flex;

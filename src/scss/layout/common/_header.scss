@@ -9,7 +9,6 @@
   position: sticky;
   z-index: $z-index-header;
   top: 0;
-  padding: 30px 0;
   background-color: $palette-darkblue;
 
   box-shadow: 0 5px 33px rgba($palette-darkblue, 0.41);
@@ -19,9 +18,19 @@
     transform: translateY(-100%);
   }
 
+  .container {
+    position: relative;
+  }
+
   &__wrapper {
+    position: relative;
+    z-index: 2;
+
     display: flex;
     align-items: center;
+
+    padding: 30px 0;
+    background-color: $palette-darkblue;
   }
 
   &__logo {

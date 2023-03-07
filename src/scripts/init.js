@@ -14,6 +14,7 @@ accordion.forEach(item => new handorgel(item, {
   initialOpenTransition: false,
 }));
 
+const scrollController = new SmoothScroll('a[href*="#"]', scrollParams);
 
 const forms = document.querySelectorAll('form');
 forms.forEach(form => new Form(form));

@@ -3,6 +3,16 @@
 const header = document.getElementById('header');
 
 if (header) {
+  let headerHeight = 0;
+
+  const SetHeight = (target) => {
+    headerHeight = target.offsetHeight;
+    document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+  }
+
+  SetHeight(header);
+
+  window.addEventListener('resize', () => SetHeight(header));
 
   let lastScroll = 0;
 
@@ -23,70 +33,66 @@ if (header) {
 
   const headerDropdown = header.querySelectorAll('.dropdown__header > .dropdown__link');
 
-  let scrollPosition = window.pageYOffset;
   headerDropdown.forEach(dropdown => {
     // Открытие дропдаунов и закрытие при клике не по ним
-    dropdown.addEventListener('click', () => dropdown.closest('.dropdown').classList.toggle(StyleСlass.header.dropdown.open));
-    window.addEventListener('click',
+    dropdown.addEventListener('click', () => {
+      dropdown.closest('.dropdown').classList.toggle(StyleСlass.header.dropdown.open)
+      overlay.classList.toggle(StyleСlass.body.overlay)
+    });
+
+    // Скрытие при клике в любом месте
+    overlay.addEventListener('click',
       (e) => {
-        if (!dropdown.parentNode.contains(e.target)) dropdown.parentNode.classList.remove(StyleСlass.header.dropdown.open);
+        if (!dropdown.parentNode.contains(e.target)) {
+          dropdown.closest('.dropdown').classList.remove(StyleСlass.header.dropdown.open);
+          overlay.classList.remove(StyleСlass.body.overlay)
+        }
       });
 
     // Скрытие их при скролле
     window.addEventListener('scroll',
       () => {
         dropdown.closest('.dropdown').classList.remove(StyleСlass.header.dropdown.open);
+        overlay.classList.remove(StyleСlass.body.overlay)
       });
   })
 
 
+  /*
+  --------------------------------------------------------
+                СКРИПТ БОКОВОГО МЕНЮ
+  --------------------------------------------------------
+  */
 
-  // /*
-  // --------------------------------------------------------
-  //               СКРИПТ БОКОВОГО МЕНЮ
-  // --------------------------------------------------------
-  // */
+  const headerBurger = header.querySelector('.hamburger');;
+  const sideMenu = document.getElementById('side-menu');
 
-  // const headerBurger = header.querySelector('.header__burger, .header-portfolio__burger');
+  headerBurger.addEventListener('click', () => {
+    Menu('side', 'toggle')
+    overlay.classList.toggle(StyleСlass.body.overlay)
+  });
 
-  // const sideMenu = document.getElementById('side-menu');
-  // const sideMenuOverlay = sideMenu.querySelector('.side-menu__overlay');
-  // const sideMenuClose = sideMenu.querySelector('.side-menu__close');
-  // const sideMenuButton = sideMenu.querySelector('.side-menu__button');
+  overlay.addEventListener('click',
+    (e) => {
+      if (!sideMenu.parentNode.contains(e.target)) {
+        Menu('side', 'close')
+      }
+    });
 
-  // let timer = null;
+  // Скрытие их при скролле
+  window.addEventListener('scroll',
+    () => {
+      Menu('side', 'close')
+      overlay.classList.remove(StyleСlass.body.overlay)
+    });
 
-  // sideMenuOverlay.addEventListener('click', () => Menu('side', 'close'));
-  // sideMenuClose.addEventListener('click', () => Menu('side', 'close'));
-  // headerBurger.addEventListener('click', () => Menu('side', 'open'));
-  // sideMenuButton.addEventListener('click', () => Menu('side', 'close'));
+  /*
+  --------------------------------------------------------
+                СКРИПТ МОБИЛЬНОГО МЕНЮ
+  --------------------------------------------------------
+  */
 
-  // headerBurger.addEventListener('mouseenter', () => {
-  //   window.clearTimeout(timer);
-  //   headerBurger.classList.add(StyleСlass.side.burger);
-  // });
-
-  // headerBurger.addEventListener('mouseleave', () => timer = window.setTimeout(() => {
-  //   headerBurger.classList.remove(StyleСlass.side.burger);
-  // }, 500));
-
-  // sideMenuClose.addEventListener('mouseenter', () => {
-  //   sideMenuClose.classList.add(StyleСlass.side.burger);
-  // });
-
-  // sideMenuClose.addEventListener('mouseleave', () => {
-  //   sideMenuClose.classList.remove(StyleСlass.side.burger);
-  // });
-
-
-
-  // /*
-  // --------------------------------------------------------
-  //               СКРИПТ МОБИЛЬНОГО МЕНЮ
-  // --------------------------------------------------------
-  // */
-
-  // const headerMobile = header.querySelector('.header__mobile .hamburger');
+  // const headerMobile = header.querySelector('.hamburger');
   // const mobileMenu = document.getElementById('mobile-menu');
   // if (mobileMenu) {
   //   const mobileMenuOverlay = mobileMenu.querySelector('.mobile-menu__overlay');
@@ -99,34 +105,32 @@ if (header) {
 
 
 
-  // /*
-  // --------------------------------------------------------
-  //               ОБРАБОТЧИК МЕНЮ
-  // --------------------------------------------------------
-  // */
+  /*
+  --------------------------------------------------------
+                ОБРАБОТЧИК МЕНЮ
+  --------------------------------------------------------
+  */
 
-  // function Menu(menu, state) {
-  //   if (state === 'open') {
-  //     document.body.classList.add(StyleСlass.body.overflow);
+  function Menu(menu, state) {
+    if (state === 'open') {
+      headerBurger.classList.add('is-active')
 
-  //     if (menu === 'side') sideMenu.classList.add(StyleСlass.side.open);
-  //     else if (menu === 'mobile') mobileMenu.classList.add(StyleСlass.mobile.open);
-  //   }
+      if (menu === 'side') sideMenu.classList.add(StyleСlass.side.open);
+      else if (menu === 'mobile') mobileMenu.classList.add(StyleСlass.mobile.open);
+    }
 
-  //   else if (state === 'close') {
-  //     document.body.classList.remove(StyleСlass.body.overflow);
-  //     if (menu === 'side') sideMenu.classList.remove(StyleСlass.side.open);
-  //   }
+    else if (state === 'close') {
+      headerBurger.classList.remove('is-active')
 
-  //   else if (state === 'toggle') {
-  //     header.classList.toggle(StyleСlass.header.inverted);
-  //     CheckHeader();
+      if (menu === 'side') sideMenu.classList.remove(StyleСlass.side.open);
+      else if (menu === 'mobile') mobileMenu.classList.remove(StyleСlass.mobile.open);
+    }
 
-  //     document.body.classList.toggle(StyleСlass.body.overflow);
-  //     if (menu === 'mobile') {
-  //       headerMobile.classList.toggle('is-active');
-  //       mobileMenu.classList.toggle(StyleСlass.mobile.open);
-  //     }
-  //   }
-  // }
+    else if (state === 'toggle') {
+      headerBurger.classList.toggle('is-active')
+
+      if (menu === 'side') sideMenu.classList.toggle(StyleСlass.side.open);
+      else if (menu === 'mobile') mobileMenu.classList.toggle(StyleСlass.mobile.open);
+    }
+  }
 }

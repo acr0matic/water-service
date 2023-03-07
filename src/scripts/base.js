@@ -3,6 +3,13 @@ const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 const isMobile = window.matchMedia('(max-width: 576px)').matches;
 const isTablet = window.matchMedia('(max-width: 991px)').matches;
 
+const scrollParams = {
+  speed: 500,
+  speedAsDuration: true,
+  offset: 45,
+  updateURL: false,
+}
+
 const StyleСlass = {
   'header': {
     'inverted': 'header-inverted',
@@ -22,6 +29,10 @@ const StyleСlass = {
   },
 
   'body': {
+    'overlay': 'overlay--show',
     'overflow': 'scroll-disabled',
   },
 }
+
+
+const overlay = document.querySelector('.overlay');

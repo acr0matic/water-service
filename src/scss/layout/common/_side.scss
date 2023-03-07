@@ -1,0 +1,18 @@
+.side-menu {
+  position: absolute;
+  z-index: 1;
+  top: -100%;
+  right: -35px;
+
+  transition: $transition ease;
+
+  &--open {
+    top: var(--header-height);
+  }
+
+  &__wrapper {
+    min-width: 340px;
+    padding: 54px 40px;
+    background-color: $palette-darkblue;
+  }
+}
