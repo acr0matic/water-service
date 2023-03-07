@@ -1,0 +1,47 @@
+/* purgecss start ignore */
+
+.swiper-fade {
+  & > .swiper-wrapper > .swiper-slide-active {
+    z-index: 5;
+  }
+}
+
+.swiper {
+  &-wrapper {
+    box-sizing: border-box;
+  }
+
+  &-button {
+    &-prev,
+    &-next {
+      width: 40px;
+      height: 72px;
+
+      background-position: center center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      transition: $transition ease;
+
+      @media (hover: hover) {
+        &:hover {
+          filter: brightness(160%);
+        }
+      }
+
+      &::after {
+        content: "";
+      }
+    }
+
+    &-prev {
+      background-image: url("../img/icons/control/slider__prev.svg");
+    }
+
+    &-next {
+      background-image: url("../img/icons/control/slider__next.svg");
+    }
+  }
+}
+
+/* purgecss end ignore */

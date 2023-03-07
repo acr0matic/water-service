@@ -1,0 +1,25 @@
+.portfolio-block-thumb {
+  overflow: visible;
+
+  .swiper-wrapper {
+    justify-content: center;
+  }
+
+  .swiper-slide {
+    width: 230px;
+    cursor: pointer;
+  }
+
+  .swiper-slide > * {
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-12px);
+      }
+    }
+  }
+
+  .swiper-slide-thumb-active > * {
+    border-color: $palette-darkblue;
+    transform: translateY(-12px);
+  }
+}

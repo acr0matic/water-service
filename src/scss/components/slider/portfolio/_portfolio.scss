@@ -1,0 +1,46 @@
+.slider-portfolio {
+  overflow: visible;
+
+  .swiper-pagination {
+    position: static;
+
+    display: flex;
+    justify-content: center;
+
+    &-bullet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: fit-content;
+      height: fit-content;
+
+      margin: 0 !important;
+      padding: 0 20px 8px;
+
+      border-bottom: 2px solid rgba($color: #000000, $alpha: 0.1);
+
+      border-radius: 0;
+      outline: none;
+
+      background-color: transparent;
+      color: $color-text__black;
+
+      font-weight: $weight-Medium;
+      font-size: $font-size__text--large;
+
+      opacity: 1;
+      transition: $transition ease;
+
+      &:hover {
+        @media (hover: hover) {
+          border-color: $palette-blue;
+        }
+      }
+
+      &-active {
+        border-color: $palette-blue;
+      }
+    }
+  }
+}

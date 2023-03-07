@@ -1,4 +1,17 @@
 .list {
-  &__item {
+  &--advantage {
+    li {
+      color: $color-text__blue;
+      font-weight: $weight-Medium;
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    span {
+      color: $palette-darkblue;
+      font-weight: $weight-Bold;
+    }
   }
 }
