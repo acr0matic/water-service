@@ -1,0 +1,41 @@
+#hero {
+  background-image: url("../img/layout/misc/hero-background.svg");
+}
+
+main#home #hero .hero__background {
+  top: -120px;
+  right: -50px;
+}
+
+main#about #hero {
+  .hero__background {
+    top: -100px;
+    right: 110px;
+  }
+}
+
+.hero {
+  position: relative;
+
+  & > .row {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__content {
+    padding-top: 110px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    margin-bottom: 64px;
+  }
+
+  &__background {
+    position: absolute;
+    z-index: 1;
+  }
+}

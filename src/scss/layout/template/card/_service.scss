@@ -8,6 +8,8 @@
   border: 2px solid $palette-darkblue;
   border-radius: $border-radius;
 
+  background-color: $palette-white;
+
   @media (hover: hover) {
     &:hover::after {
       width: 125%;

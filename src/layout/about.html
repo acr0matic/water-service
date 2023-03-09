@@ -1,0 +1,146 @@
+@@include('layout/partials/header.html')
+
+<!-- Основной контент -->
+<main id="about">
+  <section id="hero" class="section">
+    <div class="container">
+      <div class="hero">
+        <div class="row">
+          <div class="col-6">
+            <div class="hero__content">
+              <h1 class="page__title section__title hero__title">
+                Бурение и обустройство
+                <br>
+                скважин на воду
+              </h1>
+
+              <p class="page__text hero__text">
+                Гарантия от 3 лет. Любая форма оплаты.
+                <br>
+                Пластиковые кессоны и погреба.
+                <br>
+                Сервисное обслуживание. Фильтрация воды.
+              </p>
+
+              <div class="hero__action">
+                <a href="#callback" class="button button-primary me-4">Консультация</a>
+                <a href="#service" class="button button-outline">Наши услуги</a>
+              </div>
+              <!-- /.hero__action -->
+            </div>
+            <!-- /.hero__content -->
+          </div>
+          <!-- /.col-6 -->
+
+          <div class="col-6">
+            <picture class="hero__picture lazy">
+              <img class="lazy__item lazy__item--blur image image--contain" src="img/layout/page/about/hero/thumb.png" data-src="img/layout/page/about/hero/picture.png" alt="">
+            </picture>
+          </div>
+          <!-- /.col-6 -->
+        </div>
+        <!-- /.row -->
+
+        <img src="img/layout/page/about/hero/background.svg" alt="" class="hero__background">
+      </div>
+      <!-- /.hero -->
+    </div>
+    <!-- /.container -->
+  </section>
+
+  <section id="company" class="section">
+    <div class="container">
+      <div class="company">
+        <div class="row">
+          <div class="col-5">
+            <picture class="company__picture lazy">
+              <img class="image image--cover lazy__item" data-src="img/layout/page/about/company/picture.jpg" alt="">
+              <img alt="" class="preloader" src="img/misc/preloader.svg">
+            </picture>
+          </div>
+          <!-- /.col-5 -->
+
+          <div class="col-7">
+            <div class="company__content">
+              <div class="section__header">
+                <h2 class="section__title">
+                  Компания Вода Сервис
+                </h2>
+              </div>
+              <!-- /.section__header -->
+
+              <div data-editor="default" class="company__editor">
+                <p>
+                  Буровая компания Вода Сервис зародилась в 2008 году. Компанию организовали специалисты по бурению скважин.
+                </p>
+
+                <br>
+                <br>
+                <br>
+
+                <h3>Мы предерживаемся следующим принципам :</h3>
+                <br>
+                <ul>
+                  <li>Создавать качественный продукт - разведывательно-эксплуатационные скважины;</li>
+                  <li>Быть лучшими на рынке внедрять новые технологи и форматы работы с клиентами;</li>
+                  <li>Создавать выгодные решения - комплексные решения по проведению буровых, монтажных работ и поставке материалов;</li>
+                </ul>
+              </div>
+              <!-- /.company__editor -->
+            </div>
+            <!-- /.company__content -->
+          </div>
+          <!-- /.col-7 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.company -->
+    </div>
+    <!-- /.container -->
+  </section>
+
+  <section id="video" class="section">
+    <div class="container">
+      <div class="video">
+        <div class="row align-items-center">
+          <div class="col-5">
+            <div class="video__content">
+              <div class="section__header">
+                <h2 class="section__title section__title--big">
+                  Видео о нас - <span>Boда Сервис</span>
+                </h2>
+              </div>
+              <!-- /.section__header -->
+
+              <p class="section__text section__text--big">
+                Задача организации, в особенности же постоянное информационно-пропагандистское обеспечение нашей деятельности, а также свежий взгляд на привычные вещи — безусловно открывает новые горизонты для прогресса профессионального сообщества. Имеется спорная точка зрения, гласящая примерно следующее: предприниматели.
+              </p>
+            </div>
+            <!-- /.video__content -->
+          </div>
+          <!-- /.col-5 -->
+
+          <div class="col-7">
+            <div class="video__media lazy">
+              <iframe class="lazy__item" width="100%" height="100%" data-src="https://www.youtube.com/embed/QUi1D5bvJqg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <img alt="" class="preloader" src="img/misc/preloader.svg">
+            </div>
+            <!-- /.video__media -->
+          </div>
+          <!-- /.col-7 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.video -->
+    </div>
+    <!-- /.container -->
+  </section>
+
+  @@include('layout/section/terminology.html')
+
+  @@include('layout/section/portfolio.html')
+
+  @@include('layout/section/callback.html')
+</main>
+
+@@include('layout/partials/footer.html')
