@@ -1,0 +1,60 @@
+@@include('layout/partials/header.html')
+
+<!-- Основной контент -->
+<main id="price" class="offset">
+  <section id="pricelist" class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="page__title text-center">
+          Цены
+        </h2>
+      </div>
+      <!-- /.section__header -->
+
+      <div class="pricelist">
+        <div class="row mb-n5">
+          <div class="col-4 mb-5">
+            @@include('layout/template/card/price.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4 mb-5">
+            @@include('layout/template/card/price.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4 mb-5">
+            @@include('layout/template/card/price.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4 mb-5">
+            @@include('layout/template/card/price.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4 mb-5">
+            @@include('layout/template/card/price.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4 mb-5">
+            @@include('layout/template/card/price.html')
+          </div>
+          <!-- /.col-4 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="pricelist__action">
+          <button class="button button-primary">Загрузить еще</button>
+        </div>
+        <!-- /.pricelist__action -->
+      </div>
+      <!-- /.pricelist -->
+    </div>
+    <!-- /.container -->
+  </section>
+  @@include('layout/section/callback.html')
+</main>
+
+@@include('layout/partials/footer.html')

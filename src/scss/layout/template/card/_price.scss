@@ -1,0 +1,24 @@
+.card-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px 0 32px;
+
+  &__title,
+  &__cost {
+    font-weight: $weight-Medium;
+    font-size: $font-size__text--large;
+  }
+
+  &__title {
+    margin-bottom: 54px;
+  }
+
+  &__picture {
+    width: 175px;
+    margin-bottom: 16px;
+
+    aspect-ratio: 1 / 1;
+  }
+}
