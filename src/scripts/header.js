@@ -122,8 +122,8 @@ if (header) {
     else if (state === 'close') {
       headerBurger.classList.remove('is-active')
 
-      if (menu === 'side') sideMenu.classList.remove(StyleСlass.side.open);
-      else if (menu === 'mobile') mobileMenu.classList.remove(StyleСlass.mobile.open);
+      sideMenu.classList.remove(StyleСlass.side.open);
+      mobileMenu.classList.remove(StyleСlass.mobile.open);
     }
 
     else if (state === 'toggle') {

@@ -3,6 +3,10 @@
 // -----------------------------------------------------------------------------
 
 .page {
+  & > main {
+    margin-top: 95px;
+  }
+
   &__title {
     @include breakpoint($breakpoint-laptop--medium) {
       font-size: $font-size__title--large - 5px;
