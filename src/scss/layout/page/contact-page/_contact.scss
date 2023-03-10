@@ -1,0 +1,21 @@
+#contact {
+  padding-bottom: 64px;
+}
+
+.contact {
+  &__picture {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__important {
+    color: $palette-blue;
+    font-weight: $weight-Bold;
+  }
+}

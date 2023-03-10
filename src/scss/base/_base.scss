@@ -14,7 +14,12 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   overflow-x: clip;
+
+  min-height: 100vh;
+
   font-size: 1rem;
 }
 
