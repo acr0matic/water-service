@@ -58,33 +58,6 @@ if (header) {
   })
 
 
-  /*
-  --------------------------------------------------------
-                СКРИПТ БОКОВОГО МЕНЮ
-  --------------------------------------------------------
-  */
-
-  const headerBurger = header.querySelector('.hamburger');;
-  const sideMenu = document.getElementById('side-menu');
-
-  headerBurger.addEventListener('click', () => {
-    Menu('side', 'toggle')
-    overlay.classList.toggle(StyleСlass.body.overlay)
-  });
-
-  overlay.addEventListener('click',
-    (e) => {
-      if (!sideMenu.parentNode.contains(e.target)) {
-        Menu('side', 'close')
-      }
-    });
-
-  // Скрытие их при скролле
-  window.addEventListener('scroll',
-    () => {
-      Menu('side', 'close')
-      overlay.classList.remove(StyleСlass.body.overlay)
-    });
 
   /*
   --------------------------------------------------------

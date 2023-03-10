@@ -50,7 +50,8 @@
   }
 
   &__callback {
-    margin-right: auto;
+    margin-right: 50px;
+    margin-left: auto;
 
     a {
       @include breakpoint($breakpoint-laptop--medium) {
