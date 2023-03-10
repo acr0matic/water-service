@@ -1,0 +1,113 @@
+@@include('layout/partials/header.html')
+
+<!-- Основной контент -->
+<main id="portfolio-page">
+  <section id="hero" class="section">
+    <div class="container">
+      <div class="hero">
+        <div class="row">
+          <div class="col-6">
+            <div class="hero__content">
+              <h1 class="page__title section__title hero__title">
+                Наши проекты
+              </h1>
+
+              <p class="page__text hero__text">
+                Мы внимательны к каждому
+                <br>
+                нашему проекту.
+              </p>
+
+              <div class="hero__action">
+                <a href="#callback" class="button button-primary me-4">Консультация</a>
+                <a href="#service" class="button button-outline">Наши услуги</a>
+              </div>
+              <!-- /.hero__action -->
+            </div>
+            <!-- /.hero__content -->
+          </div>
+          <!-- /.col-6 -->
+
+          <div class="col-6">
+            <picture class="hero__picture lazy">
+              <img class="lazy__item lazy__item--blur image image--contain" src="img/layout/page/portfolio-page/hero/thumb.png" data-src="img/layout/page/portfolio-page/hero/picture.png" alt="">
+            </picture>
+          </div>
+          <!-- /.col-6 -->
+        </div>
+        <!-- /.row -->
+
+        <img src="img/layout/misc/hero-background-shape.svg" alt="" class="hero__background">
+      </div>
+      <!-- /.hero -->
+    </div>
+    <!-- /.container -->
+  </section>
+
+  <section id="portfolio" class="section">
+    <div class="container">
+      <div class="portfolio">
+        <div class="row gy-4">
+          <div class="col-4">
+            @@include('layout/template/card/portfolio.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4">
+            @@include('layout/template/card/portfolio.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4">
+            @@include('layout/template/card/portfolio.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4">
+            @@include('layout/template/card/portfolio.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4">
+            @@include('layout/template/card/portfolio.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4">
+            @@include('layout/template/card/portfolio.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4">
+            @@include('layout/template/card/portfolio.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4">
+            @@include('layout/template/card/portfolio.html')
+          </div>
+          <!-- /.col-4 -->
+
+          <div class="col-4">
+            @@include('layout/template/card/portfolio.html')
+          </div>
+          <!-- /.col-4 -->
+        </div>
+        <!-- /.row -->
+
+        <div class="portfolio__action">
+          <button class="button button-primary">Смотреть больше</button>
+        </div>
+        <!-- /.portfolio__action -->
+      </div>
+      <!-- /.portfolio -->
+    </div>
+    <!-- /.container -->
+  </section>
+
+  @@include('layout/section/seo.html')
+
+  @@include('layout/section/callback.html')
+</main>
+
+@@include('layout/partials/footer.html')

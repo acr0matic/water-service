@@ -1,0 +1,39 @@
+.card-portfolio {
+  padding: 18px;
+  border-radius: $border-radius;
+
+  background-color: $palette-white;
+  box-shadow: 7px 4px 22px rgba(#b4b4b4, 0.25);
+
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      .card-portfolio__picture img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__picture {
+    overflow: hidden;
+
+    width: 100%;
+    margin-bottom: 20px;
+
+    border-radius: $border-radius--small;
+
+    aspect-ratio: 4 / 3;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-size: $font-size__text--large;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

@@ -1,8 +1,14 @@
-#company {
+main#portfolio-page {
+  #seo {
+    padding-top: 130px;
+  }
+}
+
+#seo {
   padding-bottom: 50px;
 }
 
-.company {
+.seo {
   &__picture {
     width: 100%;
   }
