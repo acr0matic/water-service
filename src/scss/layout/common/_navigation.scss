@@ -23,7 +23,7 @@
     .nav__item {
       &:not(:last-child) {
         @include breakpoint($breakpoint-laptop--medium) {
-          margin-right: 30px;
+          margin-right: 36px;
         }
 
         margin-right: 60px;

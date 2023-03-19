@@ -1,4 +1,8 @@
 .card-service {
+  @include breakpoint($breakpoint-laptop--medium) {
+    height: 250px;
+  }
+
   position: relative;
   overflow: hidden;
   height: 280px;
@@ -72,10 +76,18 @@
   }
 
   &__title {
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--big;
+    }
+
     font-size: $font-size__text--large;
   }
 
   &__price {
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--regular;
+    }
+
     margin-top: auto;
 
     font-weight: $weight-SemiBold;

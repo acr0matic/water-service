@@ -16,6 +16,7 @@ const paths = {
   layout: {
     src: './src/layout/*.html',
     temp: './src/',
+    all: './src/layout/**/*.html',
     watch: ['./src/layout/**/*.html', './src/**/*.svg'],
   },
 

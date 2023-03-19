@@ -23,6 +23,10 @@
   }
 
   &__wrapper {
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding: 24px 0;
+    }
+
     position: relative;
     z-index: 2;
 
@@ -56,7 +60,7 @@
     a {
       @include breakpoint($breakpoint-laptop--medium) {
         font-weight: $weight-Medium;
-        font-size: $font-size__text--small;
+        font-size: $font-size__text--regular - 2px;
       }
 
       color: $palette-white;

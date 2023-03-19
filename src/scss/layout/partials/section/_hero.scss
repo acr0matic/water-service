@@ -1,4 +1,8 @@
 #hero {
+  @include breakpoint($breakpoint-laptop--medium) {
+    min-height: 520px;
+  }
+
   min-height: 650px;
   background-image: url("../img/layout/misc/hero-background.svg");
 }
@@ -6,6 +10,10 @@
 main#home,
 main#portfolio-page {
   #hero .hero__background {
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 600px;
+    }
+
     top: -120px;
     right: -50px;
   }
@@ -19,6 +27,12 @@ main#portfolio-page {
 
 main#about #hero {
   .hero__background {
+    @include breakpoint($breakpoint-laptop--medium) {
+      top: 0;
+      right: 0;
+      width: 500px;
+    }
+
     top: -100px;
     right: 110px;
   }
@@ -33,14 +47,26 @@ main#about #hero {
   }
 
   &__content {
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding-top: 72px;
+    }
+
     padding-top: 110px;
   }
 
   &__title {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 24px;
+    }
+
     margin-bottom: 40px;
   }
 
   &__text {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 48px;
+    }
+
     min-height: 104px;
     margin-bottom: 64px;
   }

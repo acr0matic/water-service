@@ -1,12 +1,24 @@
 [data-editor="default"] {
+  @include breakpoint($breakpoint-laptop--medium) {
+    font-size: $font-size__text--big;
+  }
+
   font-size: $font-size__text--large;
 
   h3 {
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $font-size__text--big;
+    }
+
     font-weight: $weight-Medium;
     font-size: 27px;
   }
 
   ul {
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding-left: 54px;
+    }
+
     padding-left: 70px;
     list-style: disc;
   }

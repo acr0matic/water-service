@@ -1,5 +1,7 @@
 #portfolio {
-
+  @include breakpoint($breakpoint-laptop--medium) {
+    margin-top: -64px;
+  }
 }
 
 .portfolio {

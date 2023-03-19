@@ -26,6 +26,10 @@
     }
 
     &__text {
+      @include breakpoint($breakpoint-laptop--medium) {
+        font-size: $font-size__text--big;
+      }
+
       font-weight: $weight-Regular;
       font-size: $font-size__text--large;
     }

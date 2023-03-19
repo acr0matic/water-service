@@ -1,18 +1,36 @@
 #callback {
+  @include breakpoint($breakpoint-laptop--medium) {
+    font-size: $font-size__text--big;
+  }
+
   padding-top: 80px;
   padding-bottom: 160px;
 }
 
 .callback {
+  .section__header {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 24px;
+    }
+  }
+
   .section__text {
     color: $color-text__gray;
 
     a {
+      @include breakpoint($breakpoint-laptop--medium) {
+        font-size: $font-size__text--big + 2px;
+      }
+
       font-size: $font-size__text--large;
     }
   }
 
   .form {
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-top: 54px;
+    }
+
     margin-top: 75px;
   }
 }

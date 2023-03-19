@@ -23,6 +23,11 @@
   }
 
   &__field {
+    @include breakpoint($breakpoint-laptop--medium) {
+      padding: 16px 25px;
+      font-size: $font-size__text--big;
+    }
+
     position: relative;
     z-index: 2;
 
