@@ -35,6 +35,11 @@
   }
 
   &__content {
+    @include breakpoint($breakpoint-tablet) {
+      margin-right: 0;
+      margin-bottom: 32px;
+    }
+
     margin-right: 24px;
   }
 

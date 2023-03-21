@@ -14,6 +14,11 @@ main#portfolio-page {
   }
 
   &__content {
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: 40px;
+      margin-left: 0;
+    }
+
     margin-left: 100px;
   }
 }
