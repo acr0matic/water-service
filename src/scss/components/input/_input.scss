@@ -16,6 +16,10 @@
     }
 
     .input__error {
+      @include breakpoint($breakpoint-tablet) {
+        margin-top: 0;
+      }
+
       top: 100%;
       opacity: 1;
       visibility: visible;
@@ -26,6 +30,10 @@
     @include breakpoint($breakpoint-laptop--medium) {
       padding: 16px 25px;
       font-size: $font-size__text--big;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      padding: 12px 30px;
     }
 
     position: relative;
@@ -49,6 +57,12 @@
   }
 
   &__error {
+    @include breakpoint($breakpoint-tablet) {
+      position: relative;
+      display: block;
+      margin-top: -24px;
+    }
+
     position: absolute;
     z-index: 1;
     top: 0;

@@ -3,6 +3,10 @@
     min-height: 520px;
   }
 
+  @include breakpoint($breakpoint-tablet) {
+    min-height: initial;
+  }
+
   min-height: 650px;
   background-image: url("../img/layout/misc/hero-background.svg");
 }
@@ -12,6 +16,13 @@ main#portfolio-page {
   #hero .hero__background {
     @include breakpoint($breakpoint-laptop--medium) {
       width: 600px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      top: 120px;
+      right: 45%;
+      width: 350px;
+      transform: translateX(50%);
     }
 
     top: -120px;
@@ -51,12 +62,20 @@ main#about #hero {
       padding-top: 72px;
     }
 
+    @include breakpoint($breakpoint-tablet) {
+      padding-top: 32px;
+    }
+
     padding-top: 110px;
   }
 
   &__title {
     @include breakpoint($breakpoint-laptop--medium) {
       margin-bottom: 24px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: 18px;
     }
 
     margin-bottom: 40px;
@@ -67,6 +86,11 @@ main#about #hero {
       margin-bottom: 48px;
     }
 
+    @include breakpoint($breakpoint-tablet) {
+      min-height: initial;
+      margin-bottom: 32px;
+    }
+
     min-height: 104px;
     margin-bottom: 64px;
   }
@@ -74,5 +98,12 @@ main#about #hero {
   &__background {
     position: absolute;
     z-index: 1;
+  }
+
+  &__picture {
+    @include breakpoint($breakpoint-tablet) {
+      max-width: 300px;
+      margin: 0 auto;
+    }
   }
 }

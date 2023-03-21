@@ -2,6 +2,10 @@
   position: relative;
 
   &:not(:last-child) {
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: 80px;
+    }
+
     margin-bottom: 130px;
   }
 
@@ -16,6 +20,10 @@
   &__title {
     @include breakpoint($breakpoint-laptop--medium) {
       font-size: $font-size__title--small + 3px !important;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--large !important;
     }
 
     color: $color-text__darkblue;

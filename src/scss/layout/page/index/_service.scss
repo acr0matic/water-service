@@ -12,6 +12,10 @@
     margin-bottom: -$margin * 2;
 
     > * {
+      @include breakpoint($breakpoint-tablet) {
+        width: 100% !important;
+      }
+
       margin-bottom: $margin * 2;
 
       &:nth-child(1),

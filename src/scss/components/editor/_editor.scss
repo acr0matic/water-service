@@ -3,6 +3,14 @@
     font-size: $font-size__text--big;
   }
 
+  @include breakpoint($breakpoint-tablet) {
+    font-size: $font-size__text--regular;
+  }
+
+  @include breakpoint($breakpoint-mobile--large) {
+    font-size: $font-size__text--regular - 2px;
+  }
+
   font-size: $font-size__text--large;
 
   h3 {

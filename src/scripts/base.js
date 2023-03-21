@@ -2,6 +2,7 @@ const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 const isMobile = window.matchMedia('(max-width: 576px)').matches;
 const isTablet = window.matchMedia('(max-width: 991px)').matches;
+const isLaptop = window.matchMedia('(min-width: 991px)').matches;
 
 const scrollParams = {
   speed: 500,

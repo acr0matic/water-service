@@ -6,6 +6,7 @@ if (portfolio) {
   const category = new Swiper(portfolio.querySelector('.slider-portfolio'), {
     simulateTouch: false,
     allowTouchMove: false,
+    autoHeight: true,
 
     effect: 'fade',
     fadeEffect: {
@@ -36,52 +37,54 @@ if (portfolio) {
   });
 
 
-  sliderContainers.forEach(container => {
-    const content = container.querySelector('.portfolio-block-content');
-    const thumb = container.querySelector('.portfolio-block-thumb');
+  if (isLaptop) {
+    sliderContainers.forEach(container => {
+      const content = container.querySelector('.portfolio-block-content');
+      const thumb = container.querySelector('.portfolio-block-thumb');
 
-    const thumbSlider = new Swiper(thumb, {
-      allowTouchMove: false,
-      nested: true,
-      speed: 500,
-      a11y: {
-        enabled: false,
-      },
+      const thumbSlider = new Swiper(thumb, {
+        allowTouchMove: false,
+        nested: true,
+        speed: 500,
+        a11y: {
+          enabled: false,
+        },
 
-      spaceBetween: 10,
-      slidesPerView: 'auto',
+        spaceBetween: 10,
+        slidesPerView: 'auto',
 
-      slideToClickedSlide: true,
-      centeredSlides: true,
-      centeredSlidesBounds: true,
+        slideToClickedSlide: true,
+        centeredSlides: true,
+        centeredSlidesBounds: true,
 
-      breakpoints: {
-        1200: {
-          spaceBetween: 20,
+        breakpoints: {
+          1200: {
+            spaceBetween: 20,
+          }
         }
-      }
+      });
+
+      const contentSlider = new Swiper(content, {
+        allowTouchMove: false,
+        nested: true,
+        speed: 500,
+        a11y: {
+          enabled: false,
+        },
+
+        simulateTouch: false,
+        spaceBetween: 30,
+
+        navigation: {
+          nextEl: content.querySelector('.swiper-button-next'),
+          prevEl: content.querySelector('.swiper-button-prev'),
+        },
+
+        thumbs: {
+          swiper: thumbSlider,
+          autoScrollOffset: 1,
+        },
+      });
     });
-
-    const contentSlider = new Swiper(content, {
-      allowTouchMove: false,
-      nested: true,
-      speed: 500,
-      a11y: {
-        enabled: false,
-      },
-
-      simulateTouch: false,
-      spaceBetween: 30,
-
-      navigation: {
-        nextEl: content.querySelector('.swiper-button-next'),
-        prevEl: content.querySelector('.swiper-button-prev'),
-      },
-
-      thumbs: {
-        swiper: thumbSlider,
-        autoScrollOffset: 1,
-      },
-    });
-  });
+  }
 }

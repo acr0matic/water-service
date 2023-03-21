@@ -2,26 +2,26 @@
   <div class="container">
     <div class="callback">
       <div class="row align-items-center justify-content-between justify-content-xl-start">
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="callback__content">
             <div class="section__header">
-              <h2 class="section__title">
+              <h2 class="section__title text-center text-md-start">
                 Если у вас остались вопросы
               </h2>
             </div>
             <!-- /.section__header -->
 
             <p class="section__text mb-2">
-              Свяжитесь с нашими менеджерами по горячей линии
+              Свяжителсь с нашими менеджерами <br class="d-inline-block d-md-none"> по телефону горячей линии
             </p>
 
-            <p class="d-flex align-items-center section__text">
+            <p class="d-flex flex-column flex-md-row align-items-center section__text">
               <a class="link me-2 me-xl-3" href="tel:">+7 843 505-11-55</a>
               или закажите обратный звонок
             </p>
 
             <form class="form form--horizontal form-callback" action="">
-              <div class="input me-3">
+              <div class="input mb-2 mb-md-0 me-md-3">
                 <input data-required placeholder="+7 XXX XXX-XX-XX" autocomplete="off" type="tel" name="user_phone" class="input__field">
                 <span class="input__error">Телефон указан не корректно</span>
               </div>
@@ -34,7 +34,7 @@
         </div>
         <!-- /.col-6 -->
 
-        <div class="col-4 offset-xl-1">
+        <div class="col-4 offset-xl-1 d-none d-md-block">
           <picture class="callback__picture">
             <img class="image image--contain" src="img/logo--blue.svg" alt="">
           </picture>

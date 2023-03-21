@@ -1,0 +1,24 @@
+.portfolio-block-content {
+  .swiper-wrapper {
+    @include breakpoint($breakpoint-tablet) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      margin-bottom: -32px;
+    }
+  }
+
+  .swiper-slide {
+    @include breakpoint($breakpoint-tablet) {
+      width: calc(50% - 8px);
+      margin-bottom: 32px;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
+    }
+  }
+}

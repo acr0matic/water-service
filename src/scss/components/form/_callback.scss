@@ -1,9 +1,29 @@
 .form-callback {
+  @include breakpoint($breakpoint-tablet) {
+    flex-direction: column;
+    align-items: center;
+
+    & > * {
+      max-width: 280px;
+    }
+  }
+
   .input {
     width: 340px;
+
+    &__field {
+      @include breakpoint($breakpoint-tablet) {
+        text-align: center;
+      }
+    }
   }
 
   .button {
+    @include breakpoint($breakpoint-tablet) {
+      padding: 12px 30px;
+      font-size: $font-size__text--big;
+    }
+
     width: 300px;
   }
 }

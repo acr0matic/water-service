@@ -1,24 +1,47 @@
 .portfolio-block {
   &__tab {
+    @include breakpoint($breakpoint-tablet) {
+      overflow: auto;
+      margin-bottom: 24px;
+    }
+
     margin-bottom: 50px;
   }
 
   &__action {
+    @include breakpoint($breakpoint-tablet) {
+      margin-top: 24px;
+    }
+
     margin-top: 40px;
     text-align: center;
   }
 
   &__category {
     & > div:first-child {
+      @include breakpoint($breakpoint-tablet) {
+        margin-bottom: 0;
+      }
+
       margin-bottom: 60px;
     }
   }
 
   &__content {
+    @include breakpoint($breakpoint-tablet) {
+      flex-direction: column;
+    }
+
     display: flex;
     justify-content: center;
 
     div {
+      @include breakpoint($breakpoint-tablet) {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
       width: 400px;
 
       margin: 0 50px;
@@ -33,16 +56,42 @@
     }
 
     h3 {
+      @include breakpoint($breakpoint-tablet) {
+        margin-top: 12px;
+        margin-bottom: 0;
+        font-size: $font-size__text--regular - 2px;
+      }
+
       margin-bottom: 24px;
       font-size: $font-size__title--medium - 5px;
+    }
+
+    p,
+    ul:not([class*="extra"]) {
+      @include breakpoint($breakpoint-tablet) {
+        display: none;
+      }
     }
 
     p {
       height: 140px;
     }
+
+    ul {
+      font-size: $font-size__text--small;
+    }
+
+    .extra li {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__thumb {
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
+    }
+
     width: 240px;
     padding: 12px;
 

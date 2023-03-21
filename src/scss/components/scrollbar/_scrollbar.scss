@@ -12,8 +12,19 @@
 
   &::-webkit-scrollbar-thumb {
     border: 3px solid $palette-white;
-    border-radius: 10px;
     background: $scrollbar__contoller;
+  }
+
+  &--thin {
+    &::-webkit-scrollbar {
+      width: 2px;
+      height: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: none;
+      border-radius: 0;
+    }
   }
 }
 

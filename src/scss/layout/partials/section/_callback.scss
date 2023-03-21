@@ -3,11 +3,20 @@
     font-size: $font-size__text--big;
   }
 
+  @include breakpoint($breakpoint-tablet) {
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+
   padding-top: 80px;
   padding-bottom: 160px;
 }
 
 .callback {
+  @include breakpoint($breakpoint-tablet) {
+    text-align: center;
+  }
+
   .section__header {
     @include breakpoint($breakpoint-laptop--medium) {
       margin-bottom: 24px;
@@ -22,6 +31,12 @@
         font-size: $font-size__text--big + 2px;
       }
 
+      @include breakpoint($breakpoint-tablet) {
+        margin-top: 4px;
+        margin-bottom: 24px;
+        font-weight: $weight-Bold;
+      }
+
       font-size: $font-size__text--large;
     }
   }
@@ -29,6 +44,10 @@
   .form {
     @include breakpoint($breakpoint-laptop--medium) {
       margin-top: 54px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      margin-top: 12px;
     }
 
     margin-top: 75px;

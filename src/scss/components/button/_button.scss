@@ -4,6 +4,11 @@
     font-size: $font-size__text--regular;
   }
 
+  @include breakpoint($breakpoint-tablet) {
+    padding: 10px 20px;
+    font-size: $font-size__text--small;
+  }
+
   display: inline-block;
   padding: 18px 40px;
 

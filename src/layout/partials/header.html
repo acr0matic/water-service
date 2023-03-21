@@ -3,7 +3,7 @@
 
 @@include('layout/partials/head.html')
 
-<body class="page">
+<body class="page custom-scrollbar">
   <!-- Шапка -->
   <header id="header" class="header">
     <div class="container">
@@ -15,7 +15,7 @@
         </div>
         <!-- /.header__logo -->
 
-        <div class="header__nav">
+        <div class="header__nav d-none d-md-block">
           <nav class="nav nav--header">
             <ul class="nav__list">
               <li class="nav__item dropdown">
@@ -59,19 +59,19 @@
 
         <div class="header__callback">
           <div class="callback-list">
-            <a class="link mb-1" href="tel:">+7 843 505-11-55</a>
+            <a class="link mb-md-1" href="tel:">+7 843 505-11-55</a>
             <a class="link " href="mailto:">vodaservis16@yandex.ru</a>
           </div>
           <!-- /.callback-list -->
         </div>
         <!-- /.header__callback -->
 
-        <div class="header__action">
+        <div class="header__action d-none d-md-block">
           <a href="#callback" class="button button-outline button-outline--white">Связаться с нами</a>
         </div>
         <!-- /.header__action -->
 
-        <div class="header__menu d-none">
+        <div class="header__menu d-block d-md-none">
           <div class="header__burger">
             <button class="hamburger hamburger--squeeze" type="button">
               <span class="hamburger-box">
