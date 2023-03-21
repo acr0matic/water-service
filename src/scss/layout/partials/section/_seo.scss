@@ -2,7 +2,8 @@ main#portfolio-page {
   #seo {
     @include breakpoint($breakpoint-tablet) {
       padding-top: 20px;
-    }4
+    }
+
     padding-top: 130px;
   }
 }

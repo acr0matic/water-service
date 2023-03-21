@@ -1,15 +1,22 @@
 #not-found {
+  @include breakpoint($breakpoint-tablet) {
+    padding: 70px 0;
+  }
+
   padding: 120px 0;
 }
 
 .not-found {
   &__content {
     .section__text {
+      @include breakpoint($breakpoint-tablet) {
+        margin-bottom: 32px;
+      }
+
       margin-bottom: 60px;
     }
   }
 
   &__picture {
-
   }
 }

@@ -7,7 +7,17 @@
 }
 
 .contact {
+  &__list {
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: 40px;
+    }
+  }
+
   &__item {
+    @include breakpoint($breakpoint-mobile--medium) {
+      font-size: $font-size__text--small;
+    }
+
     &:not(:last-child) {
       margin-bottom: 36px;
     }
