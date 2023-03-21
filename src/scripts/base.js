@@ -31,7 +31,7 @@ const StyleСlass = {
 
   'body': {
     'overlay': 'overlay--show',
-    'overflow': 'scroll-disabled',
+    'overflow': 'disable-scroll',
   },
 }
 

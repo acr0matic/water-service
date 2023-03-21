@@ -65,17 +65,29 @@ if (header) {
   --------------------------------------------------------
   */
 
-  // const headerMobile = header.querySelector('.hamburger');
-  // const mobileMenu = document.getElementById('mobile-menu');
-  // if (mobileMenu) {
-  //   const mobileMenuOverlay = mobileMenu.querySelector('.mobile-menu__overlay');
-  //   const button = mobileMenu.querySelector('.mobile-menu__button');
+  const headerBurger = header.querySelector('.hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileDropdownButton = mobileMenu.querySelector('.nav__item--dropdown')
+  const mobileDropdown = mobileMenu.querySelector('.mobile-menu__dropdown')
 
-  //   mobileMenuOverlay.addEventListener('click', () => Menu('mobile', 'toggle'));
-  //   button.addEventListener('click', () => Menu('mobile', 'toggle'));
-  //   headerMobile.parentNode.addEventListener('click', () => Menu('mobile', 'toggle'));
-  // }
+  if (mobileMenu) {
+    headerBurger.addEventListener('click', () => {
+      Menu('mobile', 'toggle')
 
+      mobileDropdownButton.classList.remove('open');
+      mobileDropdown.classList.remove('mobile-menu__dropdown--open');
+    });
+
+    mobileDropdownButton.addEventListener('click', () => {
+      mobileDropdownButton.classList.toggle('open');
+      mobileDropdown.classList.toggle('mobile-menu__dropdown--open');
+    });
+
+    overlay.addEventListener('click',
+      (e) => {
+        if (!mobileMenu.parentNode.contains(e.target)) Menu('mobile', 'close')
+      });
+  }
 
 
   /*
@@ -85,25 +97,27 @@ if (header) {
   */
 
   function Menu(menu, state) {
+    document.body.classList.toggle(StyleСlass.body.overflow)
+
     if (state === 'open') {
       headerBurger.classList.add('is-active')
+      overlay.classList.add(StyleСlass.body.overlay)
 
-      if (menu === 'side') sideMenu.classList.add(StyleСlass.side.open);
-      else if (menu === 'mobile') mobileMenu.classList.add(StyleСlass.mobile.open);
+      if (menu === 'mobile') mobileMenu.classList.add(StyleСlass.mobile.open);
     }
 
     else if (state === 'close') {
       headerBurger.classList.remove('is-active')
+      overlay.classList.remove(StyleСlass.body.overlay)
 
-      sideMenu.classList.remove(StyleСlass.side.open);
       mobileMenu.classList.remove(StyleСlass.mobile.open);
     }
 
     else if (state === 'toggle') {
       headerBurger.classList.toggle('is-active')
+      overlay.classList.toggle(StyleСlass.body.overlay)
 
-      if (menu === 'side') sideMenu.classList.toggle(StyleСlass.side.open);
-      else if (menu === 'mobile') mobileMenu.classList.toggle(StyleСlass.mobile.open);
+      if (menu === 'mobile') mobileMenu.classList.toggle(StyleСlass.mobile.open);
     }
   }
 }

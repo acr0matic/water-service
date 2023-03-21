@@ -44,6 +44,11 @@ main#about #hero {
       width: 500px;
     }
 
+    @include breakpoint($breakpoint-tablet) {
+      right: -60px;
+      width: 300px;
+    }
+
     top: -100px;
     right: 110px;
   }

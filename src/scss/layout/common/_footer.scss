@@ -3,6 +3,10 @@
 // -----------------------------------------------------------------------------
 
 #footer {
+  @include breakpoint($breakpoint-tablet) {
+    padding-bottom: 64px;
+  }
+
   position: relative;
   z-index: 10;
 
