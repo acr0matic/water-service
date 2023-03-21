@@ -1,4 +1,8 @@
 .card-portfolio {
+  @include breakpoint($breakpoint-tablet) {
+    padding: 8px;
+  }
+
   padding: 18px;
   border-radius: $border-radius;
 
@@ -16,6 +20,10 @@
   }
 
   &__picture {
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: 8px;
+    }
+
     overflow: hidden;
 
     width: 100%;
@@ -32,6 +40,10 @@
       font-size: $font-size__text--regular;
     }
 
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--small;
+    }
+
     margin-bottom: 8px;
     font-size: $font-size__text--large;
   }
@@ -45,6 +57,21 @@
   &__list {
     @include breakpoint($breakpoint-laptop--medium) {
       font-size: $font-size__text--small;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--small - 2px;
+
+      li {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  &__action {
+    @include breakpoint($breakpoint-tablet) {
+      display: none;
     }
   }
 }
