@@ -1,4 +1,8 @@
 .card-price {
+  @include breakpoint($breakpoint-tablet) {
+    padding-bottom: 12px;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,11 +20,21 @@
       font-size: $font-size__text--regular;
     }
 
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--small;
+    }
+
     font-weight: $weight-Medium;
     font-size: $font-size__text--large;
   }
 
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      margin-bottom: 24px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+
     width: 100%;
 
     margin-bottom: 54px;
@@ -32,6 +46,10 @@
   }
 
   &__picture {
+    @include breakpoint($breakpoint-tablet) {
+      width: 64px;
+    }
+
     width: 175px;
     margin-bottom: 16px;
 

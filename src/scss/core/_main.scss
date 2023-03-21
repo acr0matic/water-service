@@ -48,6 +48,11 @@
   margin-right: calc(-0.5 * var(--bs-gutter-x));
   margin-left: calc(-0.5 * var(--bs-gutter-x));
 }
+@media screen and (max-width: 700px) {
+  .row {
+    --bs-gutter-x: 10px;
+  }
+}
 .row > * {
   box-sizing: border-box;
   flex-shrink: 0;
