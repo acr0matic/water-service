@@ -20,11 +20,12 @@
 
   &__icon {
     @include breakpoint($breakpoint-laptop--medium) {
-      margin-left: 12px;
+      width: 14px;
+      margin-left: 8px;
     }
 
     width: 16px;
-    margin-left: 15px;
+    margin-left: 12px;
 
     transition: 0.15s ease;
 
@@ -40,7 +41,7 @@
 
     position: absolute;
     z-index: 1000;
-    top: calc(var(--header-height) - 36px);
+    top: 228%;
     left: 50%;
 
     display: flex;

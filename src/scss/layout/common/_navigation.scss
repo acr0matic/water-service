@@ -23,10 +23,10 @@
     .nav__item {
       &:not(:last-child) {
         @include breakpoint($breakpoint-laptop--medium) {
-          margin-right: 36px;
+          margin-right: 24px;
         }
 
-        margin-right: 60px;
+        margin-right: 45px;
       }
     }
 
@@ -38,6 +38,8 @@
       color: $color-text__white;
       font-size: $font-size__text--regular;
       text-transform: uppercase;
+
+      white-space: nowrap;
 
       @media (hover: hover) {
         &:hover::after {

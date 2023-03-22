@@ -78,11 +78,17 @@
     }
 
     ul {
-      font-size: $font-size__text--small;
+      @include breakpoint($breakpoint-tablet) {
+        font-size: $font-size__text--small;
+      }
     }
 
     .extra li {
-      display: flex;
+      @include breakpoint($breakpoint-tablet) {
+        display: flex;
+      }
+
+      display: none;
       flex-wrap: wrap;
     }
   }

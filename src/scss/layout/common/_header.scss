@@ -64,8 +64,11 @@
   }
 
   &__callback {
-    @include breakpoint($breakpoint-tablet) {
+    @include breakpoint($breakpoint-laptop--medium) {
       margin-right: 24px;
+    }
+
+    @include breakpoint($breakpoint-tablet) {
       text-align: right;
     }
 

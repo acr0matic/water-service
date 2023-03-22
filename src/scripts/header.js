@@ -97,7 +97,7 @@ if (header) {
   */
 
   function Menu(menu, state) {
-    document.body.classList.toggle(StyleСlass.body.overflow)
+    document.body.classList.add(StyleСlass.body.overflow)
 
     if (state === 'open') {
       headerBurger.classList.add('is-active')
@@ -109,6 +109,7 @@ if (header) {
     else if (state === 'close') {
       headerBurger.classList.remove('is-active')
       overlay.classList.remove(StyleСlass.body.overlay)
+      document.body.classList.remove(StyleСlass.body.overflow)
 
       mobileMenu.classList.remove(StyleСlass.mobile.open);
     }
