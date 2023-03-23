@@ -11,6 +11,11 @@ const scrollParams = {
   updateURL: false,
 }
 
+const modalParams = {
+  awaitCloseAnimation: true,
+  disableFocus: true,
+}
+
 const StyleСlass = {
   'header': {
     'inverted': 'header-inverted',
@@ -35,5 +40,5 @@ const StyleСlass = {
   },
 }
 
-
 const overlay = document.querySelector('.overlay');
+let currentModal = '';

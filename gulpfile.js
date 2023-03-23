@@ -1,4 +1,4 @@
-process.env.NODE_ENV = 'default' // default или wordpress
+process.env.NODE_ENV = 'wordpress' // default или wordpress
 
 const { task, series } = require('gulp');
 const requireDir = require('require-dir');
@@ -8,6 +8,7 @@ const paths = {
   dist: './dist/',
 
   html: {
+    all: './src/**/*.html',
     src: './src/*.{html,php}',
     dist: './dist/',
     watch: './src/**/*.{html,php}',
@@ -88,10 +89,7 @@ task('build', series('clean', series(
   [
     'include',
     'bootstrap',
-    'scss',
-    'autoprefix',
-    'minify_css',
-    'replace',
+    'styles',
     'scripts',
     'images',
     'favicons',

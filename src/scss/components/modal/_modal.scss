@@ -2,6 +2,10 @@ $transition-time: 0.2s;
 
 .modal {
   &__overlay {
+    @include breakpoint($breakpoint-mobile--large) {
+      align-items: flex-end;
+    }
+
     position: fixed;
     z-index: $z-index-modal;
     top: 0;
@@ -17,20 +21,59 @@ $transition-time: 0.2s;
   }
 
   &__container {
+    @include breakpoint($breakpoint-tablet) {
+      max-width: 480px;
+      padding: 50px;
+      border-radius: 20px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      padding: 24px;
+      padding-top: 64px;
+
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
     position: relative;
+
+    width: 95%;
+    max-width: 780px;
+    padding: 88px;
+
+    border-radius: $border-radius;
+    background-color: $palette-white;
   }
 
   &__header {
+    margin-bottom: 8px;
+    text-align: center;
   }
 
   &__title {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--big;
+    }
+
+    font-size: $font-size__title--small;
   }
 
   &__close {
+    @include breakpoint($breakpoint-tablet) {
+      top: 20px;
+      right: 20px;
+
+      width: 16px;
+      height: 16px;
+    }
+
     position: absolute;
     z-index: 3;
-    top: 10px;
-    right: 5px;
+    top: 30px;
+    right: 30px;
+
+    width: 24px;
+    height: 24px;
 
     border: none;
     outline: none;
@@ -52,6 +95,12 @@ $transition-time: 0.2s;
   }
 
   &__content {
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $font-size__text--regular;
+    }
+
+    font-size: $font-size__text--big + 2px;
+    text-align: center;
   }
 }
 
