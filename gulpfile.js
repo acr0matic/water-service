@@ -68,6 +68,7 @@ const paths = {
       '!./src/scripts/**/*.*',
       '!./src/scss/**/*.*',
       '!./src/*.{html,php}',
+      '!./src/layout/**/*.{html,php}',
     ],
     dist: './dist/',
     watch: [

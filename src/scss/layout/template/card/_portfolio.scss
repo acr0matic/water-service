@@ -19,6 +19,10 @@
     }
   }
 
+  &__hidden {
+    display: none;
+  }
+
   &__picture {
     @include breakpoint($breakpoint-tablet) {
       margin-bottom: 8px;

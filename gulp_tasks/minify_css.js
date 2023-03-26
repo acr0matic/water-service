@@ -15,11 +15,11 @@ const paths = require('../gulpfile');
 */
 
 task('minify_css', () => src(paths.styles.temp + paths.styles.out)
-  .pipe(
-    purgecss({
-      content: ['src/**/*.{html,php}', 'src/**/*.js'],
-    }),
-  )
+  // .pipe(
+  //   purgecss({
+  //     content: ['src/**/*.{html,php}', 'src/**/*.js'],
+  //   }),
+  // )
   .pipe(postcss(sortMediaQueries()))
   .pipe(cleanCSS({ level: 2 }))
   .pipe(rename(paths.styles.minify))

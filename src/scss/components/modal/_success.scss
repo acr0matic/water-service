@@ -1,18 +1,29 @@
 .modal-success {
-  .modal__overlay {
-    align-items: center;
-  }
-
   .modal__container {
     @include breakpoint($breakpoint-mobile--large) {
-      max-width: 320px;
+      max-width: 420px;
+      padding: 64px 32px;
     }
 
-    max-width: 540px;
+    max-width: 460px;
     padding: 36px;
   }
 
+  .modal__title {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--regular - 2px;
+    }
+
+    font-size: $font-size__text--big;
+  }
+
   .modal__text {
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $font-size__text--small;
+    }
+
+    font-size: $font-size__text--regular - 2px;
+
     br {
       @include breakpoint($breakpoint-mobile--large) {
         display: block;

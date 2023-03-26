@@ -36,6 +36,7 @@ modalTrigger.forEach(trigger => trigger.addEventListener('click', () => {
 
   if (modal) {
     const form = modal.querySelector('form');
-    form.dataset.subject = trigger.dataset.subject;
+
+    if (form) form.dataset.subject = trigger.dataset.subject;
   }
 }));

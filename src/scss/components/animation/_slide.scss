@@ -8,6 +8,16 @@
   }
 }
 
+@keyframes slide-in-long {
+  from {
+    transform: translateY(50%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 @keyframes slide-out {
   from {
     transform: translateY(0);
@@ -15,5 +25,15 @@
 
   to {
     transform: translateY(-10%);
+  }
+}
+
+@keyframes slide-out-long {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(50%);
   }
 }

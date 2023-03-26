@@ -18,13 +18,17 @@ $transition-time: 0.2s;
     justify-content: center;
 
     background: rgba(#000000, 0.7);
+    backdrop-filter: blur(2px);
   }
 
   &__container {
+    @include breakpoint($breakpoint-laptop--medium) {
+      max-width: 910px;
+    }
+
     @include breakpoint($breakpoint-tablet) {
       max-width: 480px;
       padding: 50px;
-      border-radius: 20px;
     }
 
     @include breakpoint($breakpoint-mobile--large) {
@@ -37,40 +41,39 @@ $transition-time: 0.2s;
 
     position: relative;
 
-    width: 95%;
-    max-width: 780px;
-    padding: 88px;
+    width: 100%;
+    max-width: 1050px;
+    padding: 24px 36px;
 
     border-radius: $border-radius;
     background-color: $palette-white;
   }
 
   &__header {
-    margin-bottom: 8px;
-    text-align: center;
+    @include breakpoint($breakpoint-laptop--medium) {
+      margin-bottom: 16px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
   }
 
   &__title {
-    @include breakpoint($breakpoint-tablet) {
+    @include breakpoint($breakpoint-laptop--medium) {
       font-size: $font-size__text--big;
     }
 
-    font-size: $font-size__title--small;
+    font-size: $font-size__text--large;
   }
 
   &__close {
-    @include breakpoint($breakpoint-tablet) {
-      top: 20px;
-      right: 20px;
-
-      width: 16px;
-      height: 16px;
+    @include breakpoint($breakpoint-laptop--medium) {
+      width: 20px;
+      height: 20px;
     }
-
-    position: absolute;
-    z-index: 3;
-    top: 30px;
-    right: 30px;
 
     width: 24px;
     height: 24px;
@@ -95,12 +98,6 @@ $transition-time: 0.2s;
   }
 
   &__content {
-    @include breakpoint($breakpoint-tablet) {
-      font-size: $font-size__text--regular;
-    }
-
-    font-size: $font-size__text--big + 2px;
-    text-align: center;
   }
 }
 
@@ -122,6 +119,10 @@ $transition-time: 0.2s;
 }
 
 .micromodal-slide[aria-hidden="false"] .modal__container {
+  @include breakpoint($breakpoint-tablet) {
+    animation: slide-in-long $transition-time cubic-bezier(0, 0, 0.2, 1);
+  }
+
   animation: slide-in $transition-time cubic-bezier(0, 0, 0.2, 1);
 }
 
@@ -130,5 +131,9 @@ $transition-time: 0.2s;
 }
 
 .micromodal-slide[aria-hidden="true"] .modal__container {
+  @include breakpoint($breakpoint-tablet) {
+    animation: slide-out-long $transition-time cubic-bezier(0, 0, 0.2, 1);
+  }
+
   animation: slide-out $transition-time cubic-bezier(0, 0, 0.2, 1);
 }
