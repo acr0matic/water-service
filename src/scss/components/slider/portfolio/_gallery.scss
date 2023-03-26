@@ -1,9 +1,22 @@
 .slider-portfolio-gallery {
   .swiper-wrapper {
+    @include breakpoint($breakpoint-tablet) {
+      flex-wrap: nowrap;
+    }
+
     flex-wrap: wrap;
   }
 
   .swiper-slide {
+    @include breakpoint($breakpoint-tablet) {
+      width: 100% !important;
+      height: auto !important;
+
+      padding: 0;
+
+      aspect-ratio: 16 / 10;
+    }
+
     position: relative;
     padding: 5px;
 

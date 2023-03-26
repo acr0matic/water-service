@@ -1,10 +1,18 @@
 .modal-portfolio {
   .modal__header {
+    @include breakpoint($breakpoint-tablet) {
+      margin-left: 0;
+    }
+
     display: flex;
     margin-left: 5px;
   }
 
   .modal__container {
+    @include breakpoint($breakpoint-tablet) {
+      padding-bottom: 0;
+    }
+
     overflow: hidden;
     padding-top: 24px;
     padding-bottom: 64px;
@@ -25,6 +33,11 @@
       padding-left: 16px;
     }
 
+    @include breakpoint($breakpoint-tablet) {
+      padding-left: 0;
+      background-color: $palette-white;
+    }
+
     position: relative;
     padding-bottom: 24px;
     padding-left: 24px;
@@ -33,6 +46,10 @@
     background-color: #f4f4f5;
 
     &::after {
+      @include breakpoint($breakpoint-tablet) {
+        background-color: $palette-white;
+      }
+
       content: "";
       position: absolute;
       top: 0;
@@ -68,6 +85,10 @@
         margin-bottom: 24px;
       }
 
+      @include breakpoint($breakpoint-tablet) {
+        display: none;
+      }
+
       margin-bottom: 32px;
 
       li {
@@ -85,7 +106,7 @@
 
     p {
       @include breakpoint($breakpoint-laptop--medium) {
-        max-height: 145px;
+        max-height: 150px;
       }
 
       overflow: auto;

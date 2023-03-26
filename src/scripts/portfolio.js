@@ -88,3 +88,17 @@ if (portfolio) {
     });
   }
 }
+
+const gallerySlider = (isTablet) ? new Swiper('.slider-portfolio-gallery', {
+  speed: 500,
+  a11y: {
+    enabled: false,
+  },
+
+  spaceBetween: 16,
+
+  pagination: {
+    el: '.slider-portfolio-gallery .swiper-pagination',
+    clickable: true,
+  },
+}) : undefined;

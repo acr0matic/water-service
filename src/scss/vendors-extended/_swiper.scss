@@ -42,6 +42,25 @@
       background-image: url("../img/icons/control/slider__next.svg");
     }
   }
+
+  &-pagination {
+    position: static;
+    margin-top: 18px;
+
+    &-bullet {
+      width: 14px;
+      height: 14px;
+
+      background-color: #ebebeb;
+      opacity: 1;
+
+      transition: $transition ease;
+
+      &-active {
+        background-color: $palette-darkblue;
+      }
+    }
+  }
 }
 
 /* purgecss end ignore */

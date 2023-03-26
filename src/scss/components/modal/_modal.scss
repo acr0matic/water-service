@@ -2,7 +2,7 @@ $transition-time: 0.2s;
 
 .modal {
   &__overlay {
-    @include breakpoint($breakpoint-mobile--large) {
+    @include breakpoint($breakpoint-tablet) {
       align-items: flex-end;
     }
 
@@ -28,10 +28,7 @@ $transition-time: 0.2s;
 
     @include breakpoint($breakpoint-tablet) {
       max-width: 480px;
-      padding: 50px;
-    }
 
-    @include breakpoint($breakpoint-mobile--large) {
       padding: 24px;
       padding-top: 64px;
 
