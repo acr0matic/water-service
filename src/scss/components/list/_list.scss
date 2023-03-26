@@ -5,6 +5,10 @@
       font-weight: $weight-Medium;
 
       &:not(:last-child) {
+        @include breakpoint($breakpoint-laptop--medium) {
+          margin-bottom: 4px;
+        }
+
         margin-bottom: 8px;
       }
     }

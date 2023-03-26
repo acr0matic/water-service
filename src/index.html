@@ -384,8 +384,8 @@
       </div>
       <!-- /.section__header -->
 
-      <div class="terminology">
-        <div class="row justify-content-center">
+      <div data-parent class="terminology">
+        <div class="row justify-content-center" data-container>
           <div class="col-12 col-xl-10 mb-n3">
             <div class="handorgel mb-3">
               <div class="handorgel__header">
@@ -514,11 +514,45 @@
           <!-- /.col-10 -->
         </div>
         <!-- /.row -->
+
+        <div class="terminology__action">
+          <button data-handler="ajax" data-target="" data-paged="" data-count="" data-max-pages="" class="button button-primary">Загрузить еще</button>
+        </div>
+        <!-- /.terminology__action -->
       </div>
       <!-- /.terminology -->
     </div>
     <!-- /.container -->
   </section>
+
+  <div class="promotion-item">
+    <div class="promotion-item__picture">
+      [metaslider id="11499"]
+    </div>
+
+    <div class="promotion-item__wrapper">
+      Изготовим и установим москитную сетку на месте за 2 часа.
+
+      Получить очень просто:
+      <ul class="spisok_or">
+        <li>Позвонить и согласовать время выезда</li>
+        <li>Дождаться Сервисной службы</li>
+        <li>Узнать стоимость и оплатить заказ</li>
+        <li>2 часа и у вас установлена качественная сетка с гарантией 1 год</li>
+      </ul>
+
+      Услуга доступна только для профиля стандартных цветов: белого, серого и коричневого.
+
+      Долой насекомых и пыль!
+
+      <div class="promotion-item__action">
+        <a class="knopka" href="#win1">Заказать звонок</a>
+      </div>
+      <!-- /.promotion-item__action -->
+    </div>
+    <!-- /.promotion-item__wrapper -->
+  </div>
+  <!-- /.promotion-item -->
 
   <section id="portfolio-block" class="section">
     <div class="container">
@@ -591,9 +625,43 @@
 
                           <p>
                             Бурение скважин воду мобильной установкой включает в себя комплекс предварительных и практических работ.
-                            <br> <br>
-                            Бурение скважин воду мобильной установкой включает в себя комплекс предварительных и практических работ.
-                            <br> <br>
+                          </p>
+
+                          <ul class="list list--advantage">
+                            <li>Cрок эксплуатации: <span>до 30 лет</span></li>
+                            <li>Срок работ: <span>1 рабочий день</span></li>
+                            <li>Гарантия: <span>6 месяцев</span></li>
+                          </ul>
+
+                          <ul class="extra list list--advantage">
+                            <li>Срок исполнения:&nbsp;<span>3 дня</span></li>
+                          </ul>
+
+                          <div class="gallery">
+                            <a href="img/layout/modal/portfolio/1.jpg"></a>
+                            <a href="img/layout/modal/portfolio/2.jpg"></a>
+                            <a href="img/layout/modal/portfolio/3.jpg"></a>
+                            <a href="img/layout/modal/portfolio/4.jpg"></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.portfolio-block__content -->
+                    </div>
+                    <!-- /.swiper-slide -->
+
+                    <div class="swiper-slide">
+                      <div class="portfolio-block__content">
+                        <picture class="lazy">
+                          <img class="image image--cover lazy__item" data-src="img/layout/section/portfolio/picture.jpg" alt="">
+                          <img alt="" class="preloader" src="img/misc/preloader.svg">
+                        </picture>
+
+                        <div class="content">
+                          <h3>
+                            Название проекта
+                          </h3>
+
+                          <p>
                             Бурение скважин воду мобильной установкой включает в себя комплекс предварительных и практических работ.
                           </p>
 
@@ -608,9 +676,197 @@
                           </ul>
 
                           <div class="gallery">
-                            <a href="img/layout/modal/portfolio/3.jpg"></a>
                             <a href="img/layout/modal/portfolio/1.jpg"></a>
                             <a href="img/layout/modal/portfolio/2.jpg"></a>
+                            <a href="img/layout/modal/portfolio/3.jpg"></a>
+                            <a href="img/layout/modal/portfolio/4.jpg"></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.portfolio-block__content -->
+                    </div>
+                    <!-- /.swiper-slide -->
+                  </div>
+                  <!-- /.swiper-wrapper -->
+
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <!-- /.swiper portfolio-block-content -->
+
+                <div class="swiper portfolio-block-thumb">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="portfolio-block__thumb">
+                        <picture class="lazy">
+                          <img class="image image--cover lazy__item" data-src="img/layout/section/portfolio/thumb.jpg" alt="">
+                          <img alt="" class="preloader" src="img/misc/preloader.svg">
+                        </picture>
+
+                        <h4>Название проекта</h4>
+                        <ul class="list list--advantage">
+                          <li>Срок работ: <span>3 дня</span></li>
+                        </ul>
+                      </div>
+                      <!-- /.portfolio-block__thumb -->
+                    </div>
+                    <!-- /.swiper-slide -->
+
+                    <div class="swiper-slide">
+                      <div class="portfolio-block__thumb">
+                        <picture class="lazy">
+                          <img class="image image--cover lazy__item" data-src="img/layout/section/portfolio/thumb.jpg" alt="">
+                          <img alt="" class="preloader" src="img/misc/preloader.svg">
+                        </picture>
+
+                        <h4>Название проекта</h4>
+                        <ul class="list list--advantage">
+                          <li>Срок работ: <span>3 дня</span></li>
+                        </ul>
+                      </div>
+                      <!-- /.portfolio-block__thumb -->
+                    </div>
+                    <!-- /.swiper-slide -->
+
+                    <div class="swiper-slide">
+                      <div class="portfolio-block__thumb">
+                        <picture class="lazy">
+                          <img class="image image--cover lazy__item" data-src="img/layout/section/portfolio/thumb.jpg" alt="">
+                          <img alt="" class="preloader" src="img/misc/preloader.svg">
+                        </picture>
+
+                        <h4>Название проекта</h4>
+                        <ul class="list list--advantage">
+                          <li>Срок работ: <span>3 дня</span></li>
+                        </ul>
+                      </div>
+                      <!-- /.portfolio-block__thumb -->
+                    </div>
+                    <!-- /.swiper-slide -->
+                  </div>
+                  <!-- /.swiper-wrapper -->
+                </div>
+                <!-- /.swiper portfolio-block-thumb -->
+              </div>
+              <!-- /.portfolio-block__category -->
+
+              <div class="portfolio-block__action">
+                <a href="" class="button button-primary">Смотреть все проекты</a>
+              </div>
+              <!-- /.portfolio-block__action -->
+            </div>
+            <!-- /.swiper-slide -->
+
+            <div data-title="Водоснабжение" class="swiper-slide">
+              <div class="portfolio-block__category">
+                <div class="swiper portfolio-block-content">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="portfolio-block__content">
+                        <picture class="lazy">
+                          <img class="image image--cover lazy__item" data-src="img/layout/section/portfolio/picture.jpg" alt="">
+                          <img alt="" class="preloader" src="img/misc/preloader.svg">
+                        </picture>
+
+                        <div class="content">
+                          <h3>
+                            Название проекта
+                          </h3>
+
+                          <p>
+                            Бурение скважин воду мобильной установкой включает в себя комплекс предварительных и практических работ.
+                          </p>
+
+                          <ul class="list list--advantage">
+                            <li>Cрок эксплуатации: <span>до 30 лет</span></li>
+                            <li>Срок работ: <span>1 рабочий день</span></li>
+                            <li>Гарантия: <span>6 месяцев</span></li>
+                          </ul>
+
+                          <ul class="extra list list--advantage">
+                            <li>Срок исполнения:&nbsp;<span>3 дня</span></li>
+                          </ul>
+
+                          <div class="gallery">
+                            <a href="img/layout/modal/portfolio/1.jpg"></a>
+                            <a href="img/layout/modal/portfolio/2.jpg"></a>
+                            <a href="img/layout/modal/portfolio/3.jpg"></a>
+                            <a href="img/layout/modal/portfolio/4.jpg"></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.portfolio-block__content -->
+                    </div>
+                    <!-- /.swiper-slide -->
+
+                    <div class="swiper-slide">
+                      <div class="portfolio-block__content">
+                        <picture class="lazy">
+                          <img class="image image--cover lazy__item" data-src="img/layout/section/portfolio/picture.jpg" alt="">
+                          <img alt="" class="preloader" src="img/misc/preloader.svg">
+                        </picture>
+
+                        <div class="content">
+                          <h3>
+                            Название проекта
+                          </h3>
+
+                          <p>
+                            Бурение скважин воду мобильной установкой включает в себя комплекс предварительных и практических работ.
+                          </p>
+
+                          <ul class="list list--advantage">
+                            <li>Cрок эксплуатации: <span>до 30 лет</span></li>
+                            <li>Срок работ: <span>1 рабочий день</span></li>
+                            <li>Гарантия: <span>6 месяцев</span></li>
+                          </ul>
+
+                          <ul class="extra list list--advantage">
+                            <li>Срок исполнения:&nbsp;<span>3 дня</span></li>
+                          </ul>
+
+                          <div class="gallery">
+                            <a href="img/layout/modal/portfolio/1.jpg"></a>
+                            <a href="img/layout/modal/portfolio/2.jpg"></a>
+                            <a href="img/layout/modal/portfolio/3.jpg"></a>
+                            <a href="img/layout/modal/portfolio/4.jpg"></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- /.portfolio-block__content -->
+                    </div>
+                    <!-- /.swiper-slide -->
+
+                    <div class="swiper-slide">
+                      <div class="portfolio-block__content">
+                        <picture class="lazy">
+                          <img class="image image--cover lazy__item" data-src="img/layout/section/portfolio/picture.jpg" alt="">
+                          <img alt="" class="preloader" src="img/misc/preloader.svg">
+                        </picture>
+
+                        <div class="content">
+                          <h3>
+                            Название проекта
+                          </h3>
+
+                          <p>
+                            Бурение скважин воду мобильной установкой включает в себя комплекс предварительных и практических работ.
+                          </p>
+
+                          <ul class="list list--advantage">
+                            <li>Cрок эксплуатации: <span>до 30 лет</span></li>
+                            <li>Срок работ: <span>1 рабочий день</span></li>
+                            <li>Гарантия: <span>6 месяцев</span></li>
+                          </ul>
+
+                          <ul class="extra list list--advantage">
+                            <li>Срок исполнения:&nbsp;<span>3 дня</span></li>
+                          </ul>
+
+                          <div class="gallery">
+                            <a href="img/layout/modal/portfolio/1.jpg"></a>
+                            <a href="img/layout/modal/portfolio/2.jpg"></a>
+                            <a href="img/layout/modal/portfolio/3.jpg"></a>
                             <a href="img/layout/modal/portfolio/4.jpg"></a>
                           </div>
                         </div>
@@ -981,6 +1237,7 @@
 <script src="scripts/header.js"></script>
 <script src="scripts/portfolio.js"></script>
 <script src="scripts/modal-portfolio.js"></script>
+<script src="scripts/loadmore.js"></script>
 <!-- endbuild -->
 </body>
 
