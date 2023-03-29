@@ -32,7 +32,9 @@ main#portfolio-page {
 
 main#portfolio-page {
   .hero__picture {
-    margin-top: 50px;
+    max-width: 595px;
+    margin-left: auto;
+    aspect-ratio: 1 / 1;
   }
 }
 

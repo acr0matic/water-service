@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const del = require('del');
-const rename = require("gulp-rename");
+const rename = require('gulp-rename');
 const paths = require('../gulpfile');
 
 const useref = require('gulp-useref');

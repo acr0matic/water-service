@@ -29,12 +29,6 @@
   }
 
   &__info {
-    @include breakpoint($breakpoint-tablet) {
-      br {
-        display: none;
-      }
-    }
-
     display: flex;
     flex-direction: column;
   }

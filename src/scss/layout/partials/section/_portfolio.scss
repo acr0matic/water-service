@@ -77,8 +77,9 @@
 
       @include breakpoint($breakpoint-tablet) {
         margin-top: 12px;
-        margin-bottom: 0;
+        margin-bottom: 4px;
         font-size: $font-size__text--regular - 2px;
+        line-height: 1;
       }
 
       margin-bottom: 24px;
@@ -97,13 +98,13 @@
     }
 
     ul {
+      @include breakpoint($breakpoint-laptop--medium) {
+        font-size: $font-size__text--regular - 2px;
+      }
+
       @include breakpoint($breakpoint-tablet) {
         margin-top: 0;
         font-size: $font-size__text--small;
-      }
-
-      @include breakpoint($breakpoint-laptop--medium) {
-        font-size: $font-size__text--regular - 2px;
       }
 
       margin-top: 24px;
@@ -149,7 +150,9 @@
     }
 
     h4 {
+      margin-bottom: 4px;
       font-size: $font-size__text--regular;
+      line-height: 1;
     }
 
     ul {
