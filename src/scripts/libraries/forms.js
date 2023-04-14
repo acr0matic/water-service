@@ -158,7 +158,9 @@ class Form {
     const additional = this.form.getAttribute('data-additional');
     const subject = this.form.getAttribute('data-subject');
 
+    data.append('page', document.title);
     data.append('target', target);
+
     if (additional) data.append('additional', additional);
     if (subject) data.append('subject', subject);
 
@@ -190,7 +192,7 @@ class Form {
     }
 
     // Логируем ошибку, если возникла
-    catch (error) {
+    catch (e) {
       console.error('Ошибка ' + e.name + ":" + e.message + "\n" + e.stack);
     }
 

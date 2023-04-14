@@ -11,7 +11,6 @@ const scrollParams = {
   updateURL: false,
 }
 
-
 const modalParams = {
   awaitCloseAnimation: true,
   disableFocus: true,

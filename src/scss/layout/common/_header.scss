@@ -6,11 +6,14 @@
 }
 
 .header {
+  @include breakpoint($breakpoint-mobile--large) {
+    overflow: hidden;
+  }
+
   position: sticky;
   z-index: $z-index-header;
   top: 0;
 
-  overflow-x: clip;
   background-color: $palette-darkblue;
 
   box-shadow: 0 5px 33px rgba($palette-darkblue, 0.41);

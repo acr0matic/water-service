@@ -14,16 +14,18 @@ if (header) {
 
   window.addEventListener('resize', () => SetHeight(header));
 
-  let lastScroll = 0;
+  if (!isSafari) {
+    let lastScroll = 0;
 
-  window.addEventListener('scroll', () => {
-    const position = window.pageYOffset;
+    window.addEventListener('scroll', () => {
+      const position = window.pageYOffset;
 
-    if (position > lastScroll) header.classList.add(StyleСlass.header.hidden);
-    else header.classList.remove(StyleСlass.header.hidden);
+      if (position > lastScroll) header.classList.add(StyleСlass.header.hidden);
+      else header.classList.remove(StyleСlass.header.hidden);
 
-    lastScroll = position;
-  });
+      lastScroll = position;
+    });
+  }
 
   /*
   --------------------------------------------------------
@@ -97,7 +99,6 @@ if (header) {
   */
 
   function Menu(menu, state) {
-    document.body.classList.add(StyleСlass.body.overflow)
 
     if (state === 'open') {
       headerBurger.classList.add('is-active')
@@ -117,6 +118,8 @@ if (header) {
     else if (state === 'toggle') {
       headerBurger.classList.toggle('is-active')
       overlay.classList.toggle(StyleСlass.body.overlay)
+      document.body.classList.toggle(StyleСlass.body.overflow)
+
 
       if (menu === 'mobile') mobileMenu.classList.toggle(StyleСlass.mobile.open);
     }
